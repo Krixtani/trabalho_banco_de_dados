@@ -79,11 +79,11 @@ DROP TABLE IF EXISTS `vendas`;
 
 CREATE TABLE `vendas` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
-  `VEN_CLI` varchar(11) NOT NULL,
+  `cliente` varchar(11) NOT NULL,
   `VEN_DTA` date NOT NULL DEFAULT '2000-01-01',
   PRIMARY KEY (`id`),
-  KEY `CLIENTE` (`VEN_CLI`),
-  CONSTRAINT `CLIENTE` FOREIGN KEY (`VEN_CLI`) REFERENCES `clientes` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+  KEY `CLIENTE` (`cliente`),
+  CONSTRAINT `CLIENTE` FOREIGN KEY (`cliente`) REFERENCES `clientes` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `vendas` */
